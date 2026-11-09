@@ -1,6 +1,6 @@
 import { CheckIcon, LockIcon, ShieldIcon, XIcon } from "./Icons";
 import { GlowCard, Reveal, SectionTag } from "./ui";
-import vaultBar from "../assets/vault-bar.jpg";
+import VaultBar from "./VaultBar";
 
 const STEPS = [
   {
@@ -54,14 +54,7 @@ export default function Benefits() {
             <Reveal>
               <figure className="relative overflow-hidden rounded-3xl border border-gold-400/15 bg-ink-950">
                 <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(217,163,43,0.12),transparent_65%)]" aria-hidden="true" />
-                <img
-                  src={vaultBar}
-                  alt="A polished gold ingot engraved with a folder icon — the GoldBar vault"
-                  className="floaty-slow relative w-full mix-blend-lighten"
-                  width={1024}
-                  height={1024}
-                  loading="lazy"
-                />
+                <VaultBar />
                 <div className="floaty absolute left-5 top-5">
                   <span className="glass flex items-center gap-2 rounded-full px-3.5 py-2 text-[11px] font-semibold text-gold-200">
                     <LockIcon className="h-3.5 w-3.5" /> AES-256 sealed

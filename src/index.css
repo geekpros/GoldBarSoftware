@@ -227,6 +227,13 @@ section[id] {
   animation-play-state: paused;
 }
 
+@keyframes dust-rise {
+  0% { opacity: 0; transform: translateY(14px); }
+  30% { opacity: 0.9; }
+  100% { opacity: 0; transform: translateY(-48px); }
+}
+.dust { animation: dust-rise 5.5s ease-in-out infinite; }
+
 @keyframes sparkle-fall {
   0% { opacity: 0; transform: translateY(-6px) scale(0.4); }
   25% { opacity: 1; }
@@ -293,7 +300,7 @@ input[type="range"].gold-range::-moz-range-thumb {
     transition: none;
   }
   .aurora-a, .aurora-b, .floaty, .floaty-slow, .marquee-track,
-  .pulse-dot, .spin-slow, .scanline, .sparkle, .pop-in {
+  .pulse-dot, .spin-slow, .scanline, .sparkle, .pop-in, .dust {
     animation: none !important;
   }
   .marquee { overflow-x: auto; }

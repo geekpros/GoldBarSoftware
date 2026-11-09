@@ -56,7 +56,7 @@ check("navbar links", !!document.querySelector('a[href="#pricing"]'));
 check("features section", body.includes("One-click backup"));
 check("product tabs", !!document.querySelector("#tab-backup") && !!document.querySelector("#tab-rescue") && !!document.querySelector("#tab-tidy"));
 check("benefits + comparison", body.includes("The honest comparison") && body.includes("Plug it in"));
-check("vault image embedded", !!document.querySelector('img[src^="data:image"]'));
+check("vault artwork rendered (inline SVG)", !!document.querySelector("[data-vault-art]"));
 check("testimonials", body.includes("Maya Reynolds") && body.includes("Janet Whitfield"));
 check("pricing plans", body.includes("Most popular") && body.includes("Bring the family"));
 check("yearly default $4", body.includes("$4") && body.includes("Billed $48 once a year"));
